@@ -1,3 +1,6 @@
-.bonjour {
-    col
+@import 'base.scss';
+
+body {
+    @include text-font;
 }
+
