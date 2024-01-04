@@ -4,3 +4,24 @@ body {
     @include text-font;
 }
 
+h1 {
+    @include text-font;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-left: 15px;
+    color: $text-black;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $text-black;
+    margin: 40px 0 20px 20px;
+}
+
+h3 {
+    @include title-font;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $text-white;
+  }
