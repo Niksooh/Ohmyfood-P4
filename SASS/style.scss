@@ -37,3 +37,114 @@ h3 {
     font-weight: 600;
     margin: 30px 5px 0 0;
   }
+
+  /*Mise en page du container "localisation"*/
+  
+.localisation {
+  width: 100%;
+  background-color: $light-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  margin-top: 5px;
+
+  & i {
+    font-size: 19px;
+  }
+
+  & input {
+    width: 9rem;
+    @include text-font;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: $light-grey;
+  }
+
+  & input:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-left: 15px;
+  }
+}
+
+/*Mise en page du titre et paragraphe"*/
+.hero {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color: $light-grey2;
+  display: grid;
+  place-items: center;
+
+  & p {
+    @include text-font;
+    font-size: 1.12rem;
+    font-weight: 300;
+    text-align: center;
+    color: $dark-grey;
+    padding-top: 15px;
+  }
+}
+
+/*Mise en forme du fonctionnement"*/
+
+.filter-main {
+  width: 100%;
+  counter-reset: steps-functioning;
+  margin-bottom: 30px;
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+  }
+
+  & .filtre-1 {
+    max-width: 82%;
+    height: 20px;
+    background-color: $light-grey2;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include shadow-button;
+    position: relative;
+  }
+  & div::before {
+    counter-increment: filtre-1-filter-main;
+    content: '' counter(filtre-1-filter-main);
+    width: 30px;
+    height: 30px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    padding: 5px;
+    display: grid;
+    place-items: center;
+    @include text-font;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $text-white;
+    position: absolute;
+    left: -14px;
+  }
+
+  & i {
+    font-size: 20px;
+    color: darken($light-grey, 40%);
+    margin-right: 10px;
+  }
+}
