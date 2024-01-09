@@ -7,4 +7,53 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-left: 15px;
+  color: black;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+  margin: 40px 0 20px 20px;
+}
+@media screen and (min-width: 1024px) {
+  h2 {
+    margin: 40px 0 20px 275px;
+  }
+}
+
+h3 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: black;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+.euro {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 30px 5px 0 0;
+}
+
+.fa-heart:hover {
+  font-weight: 900;
+  color: pink;
+  background-image: linear-gradient(#ff79da to #9356dc);
 }/*# sourceMappingURL=base.css.map */

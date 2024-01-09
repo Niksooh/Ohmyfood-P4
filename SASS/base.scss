@@ -18,22 +18,25 @@ h1 {
   font-size: 1.5rem;
   font-weight: 900;
   margin-left: 15px;
-  color: $text-black;
+  color: black;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: $text-black;
+  color: black;
   margin: 40px 0 20px 20px;
+  @media screen and (min-width: 1024px) {
+    margin: 40px 0 20px 275px;
+  }
 }
 
 h3 {
 
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Shrikhand', cursive;
   font-size: 1.125rem;
   font-weight: 400;
-  color: $text-white;
+  color: black;
 }
 
 p {
@@ -53,6 +56,7 @@ p {
 .fa-heart:hover {
 font-weight: 900;
 color: pink;
+background-image: linear-gradient(#ff79da to #9356dc);
 }
 
 // Typographie
@@ -84,13 +88,13 @@ $text-white: #ffffff;
 
   //Les ombres
 @mixin header-shadow {
-  box-shadow: 0 0 5px 5px darken($light-grey, 8%);
+  box-shadow: 0 0 5px 5px darken(#eaeaea, 8%);
 }
 
 @mixin shadow-button {
-  box-shadow: 0 0 10px 0 darken($light-grey2, 26%);
+  box-shadow: 0 0 10px 0 darken(#f6f6f6, 26%);
 }
 
 @mixin menu-shadow {
-  box-shadow: 0px 4px 15px 0 lighten($text-black, 90%);
+  box-shadow: 0px 4px 15px 0 lighten(black, 90%);
 }

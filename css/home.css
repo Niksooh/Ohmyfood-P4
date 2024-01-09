@@ -18,21 +18,26 @@ h1 {
   font-size: 1.5rem;
   font-weight: 900;
   margin-left: 15px;
-  color: #000000;
+  color: black;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #000000;
+  color: black;
   margin: 40px 0 20px 20px;
+}
+@media screen and (min-width: 1024px) {
+  h2 {
+    margin: 40px 0 20px 275px;
+  }
 }
 
 h3 {
   font-family: "Shrikhand", cursive;
   font-size: 1.125rem;
   font-weight: 400;
-  color: #ffffff;
+  color: black;
 }
 
 p {
@@ -50,8 +55,335 @@ p {
 .fa-heart:hover {
   font-weight: 900;
   color: pink;
+  background-image: linear-gradient(#ff79da to #9356dc);
 }
 
-h1 {
-  color: yellow;
+/*Mise en page du header*/
+header {
+  width: 100%;
+  height: 64px;
+  box-shadow: 0 0 5px 5px #d6d6d6;
+  display: flex;
+}
+header img {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+header i {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0 24px;
+  font-size: 20px;
+}
+@media screen and (min-width: 1024px) {
+  header {
+    width: 1440px;
+    margin: 0 auto;
+    box-shadow: none;
+  }
+}
+
+/*Mise en page du container "location"*/
+.location {
+  width: 100%;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  margin-top: 5px;
+}
+.location i {
+  font-size: 19px;
+}
+.location input {
+  width: 9rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #eaeaea;
+}
+.location input:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-left: 15px;
+}
+
+/*Mise ne page de la classe titre"*/
+.titre {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color: #f6f6f6;
+  display: grid;
+  place-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .titre h1 {
+    font-size: 2.5rem;
+  }
+}
+.titre p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.12rem;
+  font-weight: 300;
+  text-align: center;
+  color: #353535;
+  padding-top: 15px;
+}
+
+/*Mise en forme du bouton "btn-purple"*/
+.btn-purple {
+  display: block;
+  margin: 30px auto 0;
+  width: 216px;
+  height: 50px;
+  background: linear-gradient(#ff79da, #9356dc);
+  border: none;
+  border-radius: 50px;
+  padding: 0 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 #b4b4b4;
+}
+
+.btn-purple:hover {
+  opacity: 0.85;
+}
+
+/*Mise en forme de la section "fonctionnement"*/
+.functioning {
+  width: 100%;
+  counter-reset: steps-functioning;
+  margin-bottom: 30px;
+}
+
+.all-steps {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .all-steps {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+  }
+}
+.all-steps .step {
+  max-width: 82%;
+  height: 20px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 0 #b4b4b4;
+  position: relative;
+}
+.all-steps div::before {
+  counter-increment: steps-functioning;
+  content: "" counter(steps-functioning);
+  width: 30px;
+  height: 30px;
+  background-color: #9356dc;
+  border-radius: 50%;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  left: -14px;
+}
+.all-steps i {
+  font-size: 20px;
+  color: #848484;
+  margin-right: 10px;
+}
+
+/*Mise en forme de la section "restaurants"*/
+.restaurant-main {
+  width: 100%;
+  background-color: #f6f6f6;
+  padding-top: 10px;
+  padding-bottom: 45px;
+}
+.restaurant-main .restaurant-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant-main .restaurant-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+/*Styles des cards*/
+.cards {
+  width: 90%;
+  height: 234px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .cards {
+    width: 35%;
+    height: 314px;
+  }
+}
+
+.restaurant-container img {
+  width: 100%;
+  height: 154px;
+  border-radius: 15px 15px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant-container img {
+    height: 230px;
+  }
+}
+
+.cards-text {
+  width: 100%;
+  padding: 10px 0 0 15px;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .cards-text {
+    padding-left: 35px;
+  }
+}
+
+.cards-text.title-restaurant {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.citie-restaurant {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.063rem;
+  font-weight: 300;
+  color: #000000;
+  margin-left: 15px;
+}
+
+.cards i {
+  font-size: 28px;
+  color: #000000;
+  position: absolute;
+  top: 174px;
+  right: 22px;
+}
+@media screen and (min-width: 1024px) {
+  .cards i {
+    font-size: 28px;
+    top: 250px;
+    right: 20px;
+  }
+}
+
+/*Mise ne forme du badge "Nouveau"*/
+.badge {
+  width: 4.5rem;
+  height: 28px;
+  background-color: #99e2d0;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  color: #10392f;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+}
+
+/*Mise en forme du footer*/
+footer {
+  width: 100%;
+  background-color: #353535;
+  padding: 22px;
+  position: relative;
+}
+footer h3 {
+  color: #ffffff;
+  margin: 0 0 15px 10px;
+}
+@media screen and (min-width: 1024px) {
+  footer h3 {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 68px;
+    right: 32px;
+  }
+}
+footer .footer-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 50px;
+    margin-right: 200px;
+  }
+}
+footer .footer-container a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 8px 10px;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-container a {
+    margin: 0 10px;
+  }
+}
+footer .footer-container a i {
+  width: 22px;
+  font-size: 16px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-container a i {
+    padding-right: 5px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    width: 1440px;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=home.css.map */

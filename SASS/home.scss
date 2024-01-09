@@ -1,5 +1,35 @@
 @import 'base';
 
+/*Mise en page du header*/
+
+header {
+    width: 100%;
+    height: 64px;
+    @include header-shadow;
+    display: flex;
+
+    & img {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+    }
+
+    & i {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0 0 24px;
+      font-size: 20px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 1440px;
+      margin: 0 auto;
+      box-shadow: none;
+    }
+  }
+
 /*Mise en page du container "location"*/
 .location {
     width: 100%;
@@ -34,6 +64,7 @@
   }
 
   /*Mise ne page de la classe titre"*/
+
   .titre {
     width: 100%;
     padding-top: 40px;
@@ -57,14 +88,38 @@
       padding-top: 15px;
     }
   }
-  /*Mise en forme de la section "functioning"*/
-  .filter-main {
+
+  /*Mise en forme du bouton "btn-purple"*/
+.btn-purple {
+    display: block;
+    margin: 30px auto 0;
+    width: 216px;
+    height: 50px;
+    background: linear-gradient($secondary-color, $primary-color);
+    border: none;
+    border-radius: 50px;
+    padding: 0 20px;
+    @include text-font;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $text-white;
+    cursor: pointer;
+    @include shadow-button;
+  }
+
+  .btn-purple:hover {
+    opacity: 0.85;
+  }
+
+  /*Mise en forme de la section "fonctionnement"*/
+
+  .functioning {
     width: 100%;
     counter-reset: steps-functioning;
     margin-bottom: 30px;
   }
 
-  .filter-container {
+  .all-steps {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -76,10 +131,10 @@
       gap: 5%;
     }
 
-    & .filtre-1 {
+    & .step {
       max-width: 82%;
       height: 20px;
-      background-color: #353535;
+      background-color: #f6f6f6;
       border-radius: 20px;
       margin: 20px;
       padding: 30px;
@@ -90,8 +145,8 @@
       position: relative;
     }
     & div::before {
-      counter-increment: filtre-1-filter-main;
-      content: '' counter(filtre-1-filter-main);
+      counter-increment: steps-functioning;
+      content: '' counter(steps-functioning);
       width: 30px;
       height: 30px;
       background-color: #9356dc;
@@ -115,6 +170,7 @@
   }
 
   /*Mise en forme de la section "restaurants"*/
+
   .restaurant-main {
     width: 100%;
     background-color: #f6f6f6;
@@ -133,5 +189,148 @@
         justify-content: center;
         align-content: center;
       }
+    }
+  }
+
+  /*Styles des cards*/
+.cards {
+    width: 90%;
+    height: 234px;
+    border-radius: 15px;
+    background-color: $text-white;
+    position: relative;
+
+    @media screen and (min-width: 1024px) {
+      width: 35%;
+      height: 314px;
+    }
+  }
+
+  .restaurant-container img {
+    width: 100%;
+    height: 154px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+
+    @media screen and (min-width: 1024px) {
+      height: 230px;
+    }
+  }
+
+  .cards-text {
+    width: 100%;
+    padding: 10px 0 0 15px;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    @media screen and (min-width: 1024px) {
+      padding-left: 35px;
+    }
+  }
+
+  .cards-text.title-restaurant {
+    @include text-font;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $text-black;
+  }
+
+  .citie-restaurant {
+    @include text-font;
+    font-size: 1.063rem;
+    font-weight: 300;
+    color: $text-black;
+    margin-left: 15px;
+  }
+
+  .cards i {
+    font-size: 28px;
+    color: $text-black;
+    position: absolute;
+    top: 174px;
+    right: 22px;
+    @media screen and (min-width: 1024px) {
+      font-size: 28px;
+      top: 250px;
+      right: 20px;
+    }
+  }
+
+  /*Mise ne forme du badge "Nouveau"*/
+
+.badge {
+    width: 4.5rem;
+    height: 28px;
+    background-color: $tertiary-color;
+    @include text-font;
+    font-size: 0.875rem;
+    color: darken($tertiary-color, 60%);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+  }
+
+/*Mise en forme du footer*/
+
+footer {
+    width: 100%;
+    background-color: $dark-grey;
+    padding: 22px;
+    position: relative;
+
+    & h3 {
+      color: $text-white;
+      margin: 0 0 15px 10px;
+      @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 68px;
+        right: 32px;
+      }
+    }
+
+    & .footer-container {
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 50px;
+        margin-right: 200px;
+      }
+
+      & a {
+        @include text-font;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $text-white;
+        margin: 8px 10px;
+        position: relative;
+
+        @media screen and (min-width: 1024px) {
+          margin: 0 10px;
+        }
+
+        i {
+          width: 22px;
+          font-size: 16px;
+        }
+
+        & i {
+          @media screen and (min-width: 1024px) {
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 1440px;
+      margin: 0 auto;
     }
   }
