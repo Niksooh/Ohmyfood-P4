@@ -1,5 +1,137 @@
 @import 'base';
 
-h1 {
-    color: yellow
-}
+/*Mise en page du container "location"*/
+.location {
+    width: 100%;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 5px;
+
+    & i {
+      font-size: 19px;
+    }
+
+    & input {
+      width: 9rem;
+      @include text-font;
+      font-size: 1rem;
+      font-weight: 400;
+      text-align: center;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      background-color: #eaeaea;
+    }
+
+    & input:focus {
+      background-color: rgba(255, 255, 255, 0.4);
+      margin-left: 15px;
+    }
+  }
+
+  /*Mise ne page de la classe titre"*/
+  .titre {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    background-color: #f6f6f6;
+    display: grid;
+    place-items: center;
+
+    & h1 {
+      @media screen and (min-width: 1024px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    & p {
+      @include text-font;
+      font-size: 1.12rem;
+      font-weight: 300;
+      text-align: center;
+      color: #353535;
+      padding-top: 15px;
+    }
+  }
+  /*Mise en forme de la section "functioning"*/
+  .filter-main {
+    width: 100%;
+    counter-reset: steps-functioning;
+    margin-bottom: 30px;
+  }
+
+  .filter-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 5%;
+    }
+
+    & .filtre-1 {
+      max-width: 82%;
+      height: 20px;
+      background-color: #353535;
+      border-radius: 20px;
+      margin: 20px;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include shadow-button;
+      position: relative;
+    }
+    & div::before {
+      counter-increment: filtre-1-filter-main;
+      content: '' counter(filtre-1-filter-main);
+      width: 30px;
+      height: 30px;
+      background-color: #9356dc;
+      border-radius: 50%;
+      padding: 5px;
+      display: grid;
+      place-items: center;
+      @include text-font;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: white;
+      position: absolute;
+      left: -14px;
+    }
+
+    & i {
+      font-size: 20px;
+      color: darken(#eaeaea, 40%);
+      margin-right: 10px;
+    }
+  }
+
+  /*Mise en forme de la section "restaurants"*/
+  .restaurant-main {
+    width: 100%;
+    background-color: #f6f6f6;
+    padding-top: 10px;
+    padding-bottom: 45px;
+
+    & .restaurant-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+
+      @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+      }
+    }
+  }

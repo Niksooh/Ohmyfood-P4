@@ -9,6 +9,52 @@
     list-style-type: none;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  }
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-left: 15px;
+  color: $text-black;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $text-black;
+  margin: 40px 0 20px 20px;
+}
+
+h3 {
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: $text-white;
+}
+
+p {
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+.euro {
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 30px 5px 0 0;
+}
+
+.fa-heart:hover {
+font-weight: 900;
+color: pink;
+}
+
 // Typographie
 //font-family: 'Roboto', sans-serif;
 //font-family: 'Shrikhand', cursive;
@@ -36,45 +82,15 @@ $text-white: #ffffff;
     font-family: 'Roboto', sans-serif;
   }
 
-  body {
-    @include text-font;
-  }
+  //Les ombres
+@mixin header-shadow {
+  box-shadow: 0 0 5px 5px darken($light-grey, 8%);
+}
 
-  h1 {
-    @include text-font;
-    font-size: 1.5rem;
-    font-weight: 900;
-    margin-left: 15px;
-    color: $text-black;
-  }
+@mixin shadow-button {
+  box-shadow: 0 0 10px 0 darken($light-grey2, 26%);
+}
 
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: $text-black;
-    margin: 40px 0 20px 20px;
-  }
-
-  h3 {
-    @include title-font;
-    font-size: 1.125rem;
-    font-weight: 400;
-    color: $text-white;
-  }
-
-  p {
-    @include text-font;
-    font-size: 1rem;
-  }
-
-  .euro {
-    @include text-font;
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 30px 5px 0 0;
-  }
-
- .fa-heart:hover {
-  font-weight: 900;
-  color: pink;
- }
+@mixin menu-shadow {
+  box-shadow: 0px 4px 15px 0 lighten($text-black, 90%);
+}
