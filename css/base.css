@@ -40,6 +40,13 @@ h3 {
   color: black;
 }
 
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #10392f;
+}
+
 p {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -55,5 +62,5 @@ p {
 .fa-heart:hover {
   font-weight: 900;
   color: pink;
-  background-image: linear-gradient(#ff79da to #9356dc);
+  color: linear-gradient(#ff79da to #9356dc);
 }/*# sourceMappingURL=base.css.map */

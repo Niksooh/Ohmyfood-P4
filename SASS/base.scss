@@ -32,7 +32,6 @@ h2 {
 }
 
 h3 {
-
   font-family: 'Shrikhand', cursive;
   font-size: 1.125rem;
   font-weight: 400;
@@ -40,14 +39,13 @@ h3 {
 }
 
 h4 {
-  @include text-font;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: darken($tertiary-color, 60%);
+  color: darken(#99e2d0, 60%);
 }
 
 p {
-
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
 }
@@ -63,7 +61,7 @@ p {
 .fa-heart:hover {
 font-weight: 900;
 color: pink;
-background-image: linear-gradient(#ff79da to #9356dc);
+color: linear-gradient(#ff79da to #9356dc);
 }
 
 // Typographie
