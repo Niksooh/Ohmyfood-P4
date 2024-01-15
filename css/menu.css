@@ -81,6 +81,7 @@ header img {
   justify-content: center;
   align-content: center;
   margin-top: 15px;
+  margin-right: 40px;
 }
 header i {
   display: flex;
@@ -98,6 +99,146 @@ header i {
 }
 
 /*Mise en forme du menu*/
+.menu {
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 20px 20px 0 0;
+  padding-bottom: 30px;
+}
+.menu-img {
+  margin-bottom: -62px;
+  z-index: -10;
+  position: relative;
+}
+.menu-img img {
+  width: 100%;
+  height: 238px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+  .menu-img img {
+    height: 530px;
+  }
+}
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+}
+.menu-title h1 {
+  font-family: "Shrikhand", cursive;
+}
+@media screen and (min-width: 1024px) {
+  .menu-title h1 {
+    font-size: 1.8rem;
+  }
+}
+.menu-title-heart {
+  width: 70px;
+  position: relative;
+  font-size: 20px;
+}
+.menu-title .heart-main {
+  top: 14px;
+  left: 80%;
+}
+@media screen and (min-width: 1024px) {
+  .menu-title .heart-main {
+    left: 90%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu-title {
+    left: -20px;
+  }
+}
+
+.menu-plates {
+  padding: 0 5px;
+}
+.menu-plates h4 {
+  padding: 30px 0 30px 10px;
+}
+.menu-plates h4::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  border-bottom: 5px solid #99e2d0;
+  display: block;
+}
+@media screen and (min-width: 1024px) {
+  .menu-plates h4 {
+    font-size: 1.3rem;
+  }
+}
+.menu-plates-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.plate {
+  width: 95%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  gap: 5px;
+  box-shadow: 0px 4px 15px 0 #e6e6e6;
+  position: relative;
+}
+
+.plate-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.plate-title {
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 9px;
+}
+.plate-title h3 {
+  width: 80%;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1024px) {
+  .plate-title h3 {
+    width: 600px;
+    font-size: 1.3rem;
+  }
+}
+.plate-title p {
+  width: 55%;
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media screen and (min-width: 380px) {
+  .plate-title p {
+    overflow: visible;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .plate-title p {
+    font-size: 1.25rem;
+  }
+}
+
 /*Mise en forme du footer*/
 footer {
   width: 100%;

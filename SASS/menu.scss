@@ -10,35 +10,177 @@ header {
     box-shadow: none;
 
     & img {
-      width: 100%;
-      height: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-content: center;
-      margin-top: 15px;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        margin-top: 15px;
+        margin-right: 40px;
     }
 
     & i {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0 15px 24px;
-      font-size: 20px;
-      color: black;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 15px 24px;
+        font-size: 20px;
+        color: black;
     }
 
     @media screen and (min-width: 1024px) {
-      width: 1440px;
-      margin: 0 auto;
-      box-shadow: none;
+        width: 1440px;
+        margin: 0 auto;
+        box-shadow: none;
+    }
+}
+
+/*Mise en forme du menu*/
+
+.menu {
+    width: 100%;
+    background-color: $light-grey2;
+    border-radius: 20px 20px 0 0;
+    padding-bottom: 30px;
+
+    &-img {
+        margin-bottom: -62px;
+        z-index: -10;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 238px;
+            object-fit: cover;
+
+            @media screen and (min-width: 1024px) {
+                height: 530px;
+            }
+        }
+    }
+
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 40px;
+
+        h1 {
+            @include title-font;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 1.8rem;
+            }
+        }
+
+        &-heart {
+            width: 70px;
+            position: relative;
+            font-size: 20px;
+        }
+
+        .heart-main {
+            top: 14px;
+            left: 80%;
+
+            @media screen and (min-width: 1024px) {
+                left: 90%;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: -20px;
+        }
+    }
+}
+
+.menu-plates {
+    padding: 0 5px;
+
+    h4 {
+      padding: 30px 0 30px 10px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 5px;
+        border-bottom: 5px solid $tertiary-color;
+        display: block;
+      }
+
+      @media screen and (min-width: 1024px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
     }
   }
 
-  /*Mise en forme du menu*/
+  .plate {
+    width: 95%;
+    background-color: $text-white;
+    border-radius: 15px;
+    display: flex;
+    gap: 5px;
+    @include menu-shadow;
+    position: relative;
 
+    }
 
+    .plate-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
 
-  /*Mise en forme du footer*/
+    .plate-title {
+      width: 255px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 9px;
+
+      h3 {
+        width: 80%;
+        color: $text-black;
+        @include text-font;
+        font-weight: 600;
+        font-size: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @media screen and (min-width: 1024px) {
+          width: 600px;
+          font-size: 1.3rem;
+        }
+      }
+
+      p {
+        width: 55%;
+        color: $text-black;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @media screen and (min-width: 380px) {
+          overflow: visible;
+        }
+
+        @media screen and (min-width: 1024px) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+/*Mise en forme du footer*/
 
 footer {
     width: 100%;
@@ -47,54 +189,56 @@ footer {
     position: relative;
 
     & h3 {
-      color: white;
-      margin: 0 0 15px 10px;
-      @media screen and (min-width: 1024px) {
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        top: 68px;
-        right: 32px;
-      }
+        color: white;
+        margin: 0 0 15px 10px;
+
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            top: 68px;
+            right: 32px;
+        }
     }
 
     & .footer-container {
-      display: flex;
-      flex-direction: column;
-      @media screen and (min-width: 1024px) {
-        flex-direction: row;
-        justify-content: flex-end;
-        margin-top: 50px;
-        margin-right: 200px;
-      }
-
-      & a {
-        font-family: 'Roboto', sans-serif;
-        font-size: 1rem;
-        font-weight: 500;
-        color: $text-white;
-        margin: 8px 10px;
-        position: relative;
+        display: flex;
+        flex-direction: column;
 
         @media screen and (min-width: 1024px) {
-          margin: 0 10px;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-top: 50px;
+            margin-right: 200px;
         }
 
-        i {
-          width: 22px;
-          font-size: 16px;
-        }
+        & a {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: $text-white;
+            margin: 8px 10px;
+            position: relative;
 
-        & i {
-          @media screen and (min-width: 1024px) {
-            padding-right: 5px;
-          }
+            @media screen and (min-width: 1024px) {
+                margin: 0 10px;
+            }
+
+            i {
+                width: 22px;
+                font-size: 16px;
+            }
+
+            & i {
+                @media screen and (min-width: 1024px) {
+                    padding-right: 5px;
+                }
+            }
         }
-      }
     }
 
     @media screen and (min-width: 1024px) {
-      width: 1440px;
-      margin: 0 auto;
+        width: 1440px;
+        margin: 0 auto;
     }
-  }
+}
