@@ -39,6 +39,13 @@ h3 {
   color: black;
 }
 
+h4 {
+  @include text-font;
+  font-size: 1rem;
+  font-weight: 500;
+  color: darken($tertiary-color, 60%);
+}
+
 p {
 
   font-family: 'Roboto', sans-serif;
