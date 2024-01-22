@@ -26,7 +26,6 @@ header {
     }
 
     @media screen and (min-width: 1024px) {
-      width: 1440px;
       margin: 0 auto;
       box-shadow: none;
     }
@@ -120,7 +119,6 @@ header {
   .functioning {
     width: 100%;
     counter-reset: steps-functioning;
-    margin-bottom: 30px;
   }
 
   .all-steps {
@@ -128,25 +126,36 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+
     @media screen and (min-width: 1024px) {
       flex-direction: row;
       justify-content: center;
       gap: 5%;
+      margin-left: -20px;
     }
 
-    & .step {
-      max-width: 82%;
+     .step {
+      width: calc(100% - 14px);
       height: 20px;
       background-color: #f6f6f6;
       border-radius: 20px;
-      margin: 20px;
       padding: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
       box-shadow: 0 0 10px 0 darken(#f6f6f6, 26%);
       position: relative;
+      margin-bottom: 20px;
+
+      @media screen and (min-width: 1024px) {
+        width: 20%;
+      }
+
+
     }
     & div::before {
       counter-increment: steps-functioning;
@@ -155,9 +164,9 @@ header {
       height: 30px;
       background-color: #9356dc;
       border-radius: 50%;
-      padding: 5px;
-      display: grid;
-      place-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-family: 'Roboto', sans-serif;
       font-size: 0.9rem;
       font-weight: 500;
@@ -166,11 +175,14 @@ header {
       left: -14px;
     }
 
+
     & i {
       font-size: 20px;
       color: darken(#eaeaea, 40%);
       margin-right: 10px;
     }
+
+
   }
 
   /*Mise en forme de la section "restaurants"*/
@@ -181,7 +193,7 @@ header {
     padding-top: 10px;
     padding-bottom: 45px;
 
-    & .restaurant-container {
+     .restaurant-container {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -193,6 +205,12 @@ header {
         justify-content: center;
         align-content: center;
       }
+    }
+
+    .title-restaurant {
+      margin-top: 15px;
+      margin-left: 15px;
+      margin-bottom: 3px;
     }
   }
 

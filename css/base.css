@@ -17,8 +17,8 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: 900;
-  margin-left: 15px;
   color: black;
+  text-align: center;
 }
 
 h2 {
@@ -34,9 +34,9 @@ h2 {
 }
 
 h3 {
-  font-family: "Shrikhand", cursive;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
   font-size: 1.125rem;
-  font-weight: 400;
   color: black;
 }
 
@@ -59,8 +59,99 @@ p {
   margin: 30px 5px 0 0;
 }
 
-.fa-heart:hover {
-  font-weight: 900;
+.cards .fa-regular {
   color: pink;
-  color: linear-gradient(#ff79da to #9356dc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: all 200ms ease-in-out;
+}
+.cards:hover .fa-regular {
+  opacity: 1;
+  color: #9356dc;
+  transform: scale(1.1);
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: loader 3s ease-in-out;
+  animation-fill-mode: both;
+}
+.loader h1 {
+  font-family: "Shrikhand", cursive;
+  color: #ffffff;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 50vh;
+  padding-bottom: 20px;
+}
+
+.loader span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  animation: 3s infinite linear;
+}
+
+.loader span:nth-child(2) {
+  background: #9356dc;
+  animation: child2 1.2s infinite linear;
+}
+
+.loader span:nth-child(3) {
+  background: #99e2d0;
+  z-index: 100;
+}
+
+.loader span:nth-child(4) {
+  background: #89c8fa;
+  animation: child4 1.2s infinite linear;
+}
+
+@keyframes loader {
+  0% {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+  }
+}
+@keyframes child2 {
+  0% {
+    transform: translateX(-20px);
+    z-index: 200;
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@keyframes child4 {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+    z-index: 200;
+  }
 }/*# sourceMappingURL=base.css.map */
