@@ -40,6 +40,9 @@ header {
     background-color: $light-grey2;
     border-radius: 20px 20px 0 0;
     padding-bottom: 30px;
+    @media screen and (min-width: 1024px) {
+        width: 50px;
+        margin-left: 250px;
 
     &-img {
         margin-bottom: -62px;
@@ -325,7 +328,7 @@ header {
      opacity: 1;
    }
  }
- 
+
 /*Mise en forme du footer*/
 
 footer {
@@ -346,7 +349,7 @@ footer {
             right: 32px;
         }
     }
-
+}
     & .footer-container {
         display: flex;
         flex-direction: column;

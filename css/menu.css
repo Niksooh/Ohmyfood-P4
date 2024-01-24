@@ -72,6 +72,90 @@ p {
   transform: scale(1.1);
 }
 
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: loader 3s ease-in-out;
+  animation-fill-mode: both;
+}
+.loader h1 {
+  font-family: "Shrikhand", cursive;
+  color: #ffffff;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 50vh;
+  padding-bottom: 20px;
+}
+
+.loader span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  animation: 3s infinite linear;
+}
+
+.loader span:nth-child(2) {
+  background: #9356dc;
+  animation: child2 1.2s infinite linear;
+}
+
+.loader span:nth-child(3) {
+  background: #99e2d0;
+  z-index: 100;
+}
+
+.loader span:nth-child(4) {
+  background: #89c8fa;
+  animation: child4 1.2s infinite linear;
+}
+
+@keyframes loader {
+  0% {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+  }
+}
+@keyframes child2 {
+  0% {
+    transform: translateX(-20px);
+    z-index: 200;
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@keyframes child4 {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+    z-index: 200;
+  }
+}
 /*Mise en page du header*/
 header {
   width: 100%;
@@ -109,34 +193,46 @@ header a {
   background-color: #f6f6f6;
   border-radius: 20px 20px 0 0;
   padding-bottom: 30px;
-}
-.menu-img {
-  margin-bottom: -62px;
-  z-index: -10;
-  position: relative;
-}
-.menu-img img {
-  width: 100%;
-  height: 238px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  /*Boutton pour commander*/
+  /*Soulignement  des entrées, platset desserts*/
+  /*Animation*/
+  /*Mise en forme du footer*/
 }
 @media screen and (min-width: 1024px) {
+  .menu {
+    width: 50px;
+    margin-left: 250px;
+  }
+  .menu-img {
+    margin-bottom: -62px;
+    z-index: -10;
+    position: relative;
+  }
+  .menu-img img {
+    width: 100%;
+    height: 238px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
   .menu-img img {
     height: 530px;
   }
 }
-.menu-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 40px;
-  margin-left: 15px;
-}
-.menu-title h1 {
-  font-family: "Shrikhand", cursive;
-}
 @media screen and (min-width: 1024px) {
+  .menu-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    margin-left: 15px;
+  }
+  .menu-title h1 {
+    font-family: "Shrikhand", cursive;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
   .menu-title h1 {
     font-size: 1.8rem;
     display: flex;
@@ -145,33 +241,34 @@ header a {
     width: 1440px;
   }
 }
-.menu-title-heart {
-  width: 70px;
-  position: relative;
-  font-size: 30px;
-}
-.menu-title .heart-main {
-  top: 14px;
-  left: 80%;
-}
 @media screen and (min-width: 1024px) {
+  .menu-title-heart {
+    width: 70px;
+    position: relative;
+    font-size: 30px;
+  }
+  .menu-title .heart-main {
+    top: 14px;
+    left: 80%;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
   .menu-title .heart-main {
     left: 90%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
   .menu-title {
     left: -20px;
   }
 }
-
-.menu-plates {
+.menu .menu-plates {
   padding: 0 5px;
 }
-.menu-plates h4 {
+.menu .menu-plates h4 {
   padding: 30px 0 30px 10px;
 }
-.menu-plates h4::after {
+.menu .menu-plates h4::after {
   content: "";
   position: absolute;
   width: 30px;
@@ -180,19 +277,18 @@ header a {
   display: block;
 }
 @media screen and (min-width: 1024px) {
-  .menu-plates h4 {
+  .menu .menu-plates h4 {
     font-size: 1.3rem;
   }
 }
-.menu-plates-content {
+.menu .menu-plates-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-
-.plate {
+.menu .plate {
   width: 95%;
   background-color: #ffffff;
   border-radius: 15px;
@@ -203,31 +299,31 @@ header a {
   overflow: hidden;
   cursor: pointer;
 }
-.plate:hover .plate-check {
+.menu .plate:hover .plate-check {
   transform: translateX(-62px);
   transition: transform 750ms ease;
 }
-.plate:hover .plate-check i {
+.menu .plate:hover .plate-check i {
   transform: rotate(360deg);
   transition: transform 1000ms ease;
 }
-.plate:hover .plate-price {
+.menu .plate:hover .plate-price {
   transform: translateX(-62px);
   transition: transform 750ms ease;
 }
-.plate-content {
+.menu .plate-content {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.plate-title {
+.menu .plate-title {
   width: 255px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 9px;
 }
-.plate-title h3 {
+.menu .plate-title h3 {
   width: 80%;
   color: #000000;
   font-family: "Roboto", sans-serif;
@@ -238,12 +334,12 @@ header a {
   white-space: nowrap;
 }
 @media screen and (min-width: 1024px) {
-  .plate-title h3 {
+  .menu .plate-title h3 {
     width: 600px;
     font-size: 1.3rem;
   }
 }
-.plate-title p {
+.menu .plate-title p {
   width: 100%;
   color: #000000;
   overflow: hidden;
@@ -252,16 +348,16 @@ header a {
   font-size: 13px;
 }
 @media screen and (min-width: 380px) {
-  .plate-title p {
+  .menu .plate-title p {
     overflow: visible;
   }
 }
 @media screen and (min-width: 1024px) {
-  .plate-title p {
+  .menu .plate-title p {
     font-size: 1.25rem;
   }
 }
-.plate-price {
+.menu .plate-price {
   color: #000000;
   font-weight: 600;
   position: absolute;
@@ -270,7 +366,7 @@ header a {
   transform: translateX(0);
   transition: transform 750ms ease;
 }
-.plate-check {
+.menu .plate-check {
   background-color: #99e2d0;
   min-width: 60px;
   height: 77px;
@@ -287,12 +383,10 @@ header a {
   transform: translateX(0);
   transition: transform 750ms ease;
 }
-.plate-check i {
+.menu .plate-check i {
   color: #ffffff;
 }
-
-/*Boutton pour commander*/
-.btn-purple {
+.menu .btn-purple {
   display: block;
   margin: 30px auto 0;
   width: 216px;
@@ -308,9 +402,7 @@ header a {
   cursor: pointer;
   box-shadow: 0 0 10px 0 #b4b4b4;
 }
-
-/*Soulignement  des entrées, platset desserts*/
-.underline {
+.menu .underline {
   width: 12%;
   height: 4px;
   background-color: #99e2d0;
@@ -318,21 +410,17 @@ header a {
   margin-left: 15px;
 }
 @media screen and (min-width: 1024px) {
-  .underline {
+  .menu .underline {
     width: 3.8%;
   }
 }
-
-/*Animation*/
-.menu-title-heart .fa-regular:active {
+.menu .menu-title-heart .fa-regular:active {
   color: #9356dc;
 }
-
-.entrees-anim {
+.menu .entrees-anim {
   opacity: 0;
   animation: descend 2s ease forwards;
 }
-
 @keyframes descend {
   from {
     transform: translateY(-100%); /* Commence en haut (en dehors de l'écran) */
@@ -343,11 +431,10 @@ header a {
     opacity: 1;
   }
 }
-.plats-anim {
+.menu .plats-anim {
   opacity: 0;
   animation: descend-two 2s ease forwards 2500ms;
 }
-
 @keyframes descend-two {
   from {
     transform: translateY(-100%); /* Commence en haut (en dehors de l'écran) */
@@ -358,11 +445,10 @@ header a {
     opacity: 1;
   }
 }
-.desserts-anim {
+.menu .desserts-anim {
   opacity: 0;
   animation: descend-three 2s ease forwards 4500ms;
 }
-
 @keyframes descend-three {
   from {
     transform: translateY(-100%); /* Commence en haut (en dehors de l'écran) */
@@ -373,19 +459,18 @@ header a {
     opacity: 1;
   }
 }
-/*Mise en forme du footer*/
-footer {
+.menu footer {
   width: 100%;
   background-color: #353535;
   padding: 22px;
   position: relative;
 }
-footer h3 {
+.menu footer h3 {
   color: white;
   margin: 0 0 15px 10px;
 }
 @media screen and (min-width: 1024px) {
-  footer h3 {
+  .menu footer h3 {
     display: flex;
     justify-content: flex-end;
     position: absolute;
@@ -393,19 +478,19 @@ footer h3 {
     right: 32px;
   }
 }
-footer .footer-container {
+.menu .footer-container {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 1024px) {
-  footer .footer-container {
+  .menu .footer-container {
     flex-direction: row;
     justify-content: flex-end;
     margin-top: 50px;
     margin-right: 200px;
   }
 }
-footer .footer-container a {
+.menu .footer-container a {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -414,21 +499,21 @@ footer .footer-container a {
   position: relative;
 }
 @media screen and (min-width: 1024px) {
-  footer .footer-container a {
+  .menu .footer-container a {
     margin: 0 10px;
   }
 }
-footer .footer-container a i {
+.menu .footer-container a i {
   width: 22px;
   font-size: 16px;
 }
 @media screen and (min-width: 1024px) {
-  footer .footer-container a i {
+  .menu .footer-container a i {
     padding-right: 5px;
   }
 }
 @media screen and (min-width: 1024px) {
-  footer {
+  .menu {
     width: 1440px;
     margin: 0 auto;
   }
