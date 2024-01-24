@@ -59,16 +59,28 @@ p {
   margin: 30px 5px 0 0;
 }
 
-.cards .fa-regular {
-  color: pink;
+.cards span {
+  display: flex;
+  position: relative;
+}
+.cards .fa-heart {
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.cards .fa-solid {
   -webkit-background-clip: text;
   background-clip: text;
-  transition: all 200ms ease-in-out;
+  transition: all 5s ease-in-out;
+  opacity: 0;
+  background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+  z-index: 10;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
-.cards:hover .fa-regular {
+.cards .fa-solid:hover {
   opacity: 1;
-  color: #9356dc;
-  transform: scale(1.1);
 }
 
 .loader {
@@ -104,6 +116,7 @@ p {
   left: 50%;
   margin-left: -10px;
   animation: 3s infinite linear;
+  pointer-events: none;
 }
 
 .loader span:nth-child(2) {

@@ -2,16 +2,16 @@
 *,
 ::before,
 ::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  }
+}
 
 h1 {
   font-family: 'Roboto', sans-serif;
@@ -26,6 +26,7 @@ h2 {
   font-weight: 700;
   color: black;
   margin: 40px 0 20px 20px;
+
   @media screen and (min-width: 1024px) {
     margin: 40px 0 20px 275px;
   }
@@ -59,17 +60,32 @@ p {
 }
 
 .cards {
-  .fa-regular {
-    color: pink;
-    -webkit-background-clip: text;
-    background-clip: text;
-    transition: all 200ms ease-in-out;
+
+  span {
+    display: flex;
+    position: relative;
   }
 
-  &:hover .fa-regular {
+  .fa-heart {
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+
+  .fa-solid {
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 5s ease-in-out;
+    opacity: 0;
+    background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+    z-index: 10;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+  }
+
+  .fa-solid:hover {
     opacity: 1;
-    color: #9356dc;
-    transform: scale(1.1);
   }
 }
 
@@ -94,14 +110,14 @@ $text-white: #ffffff;
 //les fonts
 
 @mixin title-font {
-    font-family: 'Shrikhand', cursive;
-  }
+  font-family: 'Shrikhand', cursive;
+}
 
-  @mixin text-font {
-    font-family: 'Roboto', sans-serif;
-  }
+@mixin text-font {
+  font-family: 'Roboto', sans-serif;
+}
 
-  //Les ombres
+//Les ombres
 @mixin header-shadow {
   box-shadow: 0 0 5px 5px darken(#eaeaea, 8%);
 }
@@ -139,6 +155,7 @@ $text-white: #ffffff;
     padding-bottom: 20px;
   }
 }
+
 .loader span {
   width: 22px;
   height: 22px;
@@ -148,16 +165,19 @@ $text-white: #ffffff;
   left: 50%;
   margin-left: -10px;
   animation: 3s infinite linear;
+  pointer-events: none;
 }
 
 .loader span:nth-child(2) {
   background: $primary-color;
   animation: child2 1.2s infinite linear;
 }
+
 .loader span:nth-child(3) {
   background: $tertiary-color;
   z-index: 100;
 }
+
 .loader span:nth-child(4) {
   background: $fourth-color;
   animation: child4 1.2s infinite linear;
@@ -180,9 +200,11 @@ $text-white: #ffffff;
     transform: translateX(-20px);
     z-index: 200;
   }
+
   50% {
     transform: translateX(20px);
   }
+
   100% {
     transform: translateX(-20px);
   }
