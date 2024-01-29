@@ -14,6 +14,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+img {
+  width: 100%;
+}
+
 h1 {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
@@ -30,7 +34,7 @@ h2 {
 }
 @media screen and (min-width: 1024px) {
   h2 {
-    margin: 40px 0 20px 275px;
+    margin: 40px 0 20px 135px;
   }
 }
 
@@ -60,16 +64,28 @@ p {
   margin: 30px 5px 0 0;
 }
 
-.cards .fa-regular {
-  color: pink;
+.cards span {
+  display: flex;
+  position: relative;
+}
+.cards .fa-heart {
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.cards .fa-solid {
   -webkit-background-clip: text;
   background-clip: text;
-  transition: all 200ms ease-in-out;
+  transition: all 5s ease-in-out;
+  opacity: 0;
+  background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+  z-index: 10;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
-.cards:hover .fa-regular {
+.cards .fa-solid:hover {
   opacity: 1;
-  color: #9356dc;
-  transform: scale(1.1);
 }
 
 .loader {
@@ -105,6 +121,7 @@ p {
   left: 50%;
   margin-left: -10px;
   animation: 3s infinite linear;
+  pointer-events: none;
 }
 
 .loader span:nth-child(2) {
@@ -203,12 +220,12 @@ header a {
     width: 50px;
     margin-left: 250px;
   }
-  .menu-img {
+  .menu .menu-img {
     margin-bottom: -62px;
     z-index: -10;
     position: relative;
   }
-  .menu-img img {
+  .menu .menu-img img {
     width: 100%;
     height: 238px;
     -o-object-fit: cover;
@@ -216,49 +233,76 @@ header a {
   }
 }
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
-  .menu-img img {
+  .menu .menu-img img {
     height: 530px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu-title {
+  .menu .menu-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
     margin-left: 15px;
   }
-  .menu-title h1 {
+  .menu .menu-title h1 {
     font-family: "Shrikhand", cursive;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0px;
   }
 }
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
-  .menu-title h1 {
+  .menu .menu-title h1 {
     font-size: 1.8rem;
     display: flex;
     justify-content: center;
     align-content: center;
     width: 1440px;
+    margin-left: -12px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu-title-heart {
-    width: 70px;
-    position: relative;
+  .menu .menu-title .menu-title-heart {
+    margin-left: -87px;
+    position: absolute;
+    margin-top: 8px;
     font-size: 30px;
+    width: 70%;
   }
-  .menu-title .heart-main {
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  .menu .menu-title .menu-title-heart {
+    margin-left: -76px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu .menu-title i {
+    margin-left: -87px;
+    position: absolute;
+    margin-top: 8px;
+    font-size: 30px;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  .menu .menu-title i {
+    margin-left: -485px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu .menu-title .heart-main {
     top: 14px;
     left: 80%;
   }
 }
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
-  .menu-title .heart-main {
+  .menu .menu-title .heart-main {
     left: 90%;
   }
 }
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
-  .menu-title {
+  .menu .menu-title {
     left: -20px;
   }
 }
@@ -423,11 +467,13 @@ header a {
 }
 @keyframes descend {
   from {
-    transform: translateY(-100%); /* Commence en haut (en dehors de l'écran) */
+    transform: translateY(-100%);
+    /* Commence en haut (en dehors de l'écran) */
     opacity: 0;
   }
   to {
-    transform: translateY(0); /* Se termine en bas de l'écran */
+    transform: translateY(0);
+    /* Se termine en bas de l'écran */
     opacity: 1;
   }
 }
@@ -437,11 +483,13 @@ header a {
 }
 @keyframes descend-two {
   from {
-    transform: translateY(-100%); /* Commence en haut (en dehors de l'écran) */
+    transform: translateY(-100%);
+    /* Commence en haut (en dehors de l'écran) */
     opacity: 0;
   }
   to {
-    transform: translateY(0); /* Se termine en bas de l'écran */
+    transform: translateY(0);
+    /* Se termine en bas de l'écran */
     opacity: 1;
   }
 }
@@ -451,11 +499,13 @@ header a {
 }
 @keyframes descend-three {
   from {
-    transform: translateY(-100%); /* Commence en haut (en dehors de l'écran) */
+    transform: translateY(-100%);
+    /* Commence en haut (en dehors de l'écran) */
     opacity: 0;
   }
   to {
-    transform: translateY(0); /* Se termine en bas de l'écran */
+    transform: translateY(0);
+    /* Se termine en bas de l'écran */
     opacity: 1;
   }
 }

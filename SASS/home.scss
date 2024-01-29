@@ -259,25 +259,21 @@ header {
     color: $text-black;
   }
 
+  .cards-text.menu-title-heart {
+    display: flex;
+    justify-content: space-between;
+
+    &span {
+      width: 20px;
+    }
+  }
+
   .citie-restaurant {
     font-family: 'Roboto', sans-serif;
     font-size: 1.063rem;
     font-weight: 300;
     color: $text-black;
     margin-left: 15px;
-  }
-
-  .cards i {
-    font-size: 28px;
-    color: $text-black;
-    position: absolute;
-    top: 174px;
-    right: 22px;
-    @media screen and (min-width: 1024px) {
-      font-size: 28px;
-      top: 250px;
-      right: 20px;
-    }
   }
 
   /*Mise ne forme du badge "Nouveau"*/

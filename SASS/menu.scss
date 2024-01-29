@@ -40,316 +40,350 @@ header {
     background-color: $light-grey2;
     border-radius: 20px 20px 0 0;
     padding-bottom: 30px;
+
     @media screen and (min-width: 1024px) {
         width: 50px;
         margin-left: 250px;
 
-    &-img {
-        margin-bottom: -62px;
-        z-index: -10;
-        position: relative;
-
-        img {
-            width: 100%;
-            height: 238px;
-            object-fit: cover;
-
-            @media screen and (min-width: 1024px) {
-                height: 530px;
-            }
-        }
-    }
-
-    &-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 40px;
-        margin-left: 15px;
-
-        h1 {
-            @include title-font;
-
-            @media screen and (min-width: 1024px) {
-                font-size: 1.8rem;
-                display: flex;
-                justify-content: center;
-                align-content: center;
-                width: 1440px;
-            }
-        }
-
-        &-heart {
-            width: 70px;
+        .menu-img {
+            margin-bottom: -62px;
+            z-index: -10;
             position: relative;
-            font-size: 30px;
-        }
 
-        .heart-main {
-            top: 14px;
-            left: 80%;
+            img {
+                width: 100%;
+                height: 238px;
+                object-fit: cover;
 
-            @media screen and (min-width: 1024px) {
-                left: 90%;
+                @media screen and (min-width: 1024px) {
+                    height: 530px;
+                }
             }
         }
 
-        @media screen and (min-width: 1024px) {
-            left: -20px;
-        }
-    }
-}
+        .menu-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            margin-left: 15px;
 
-.menu-plates {
-    padding: 0 5px;
+            h1 {
+                @include title-font;
+                display: flex;
+                justify-content: space-between;
+                margin-left: 0px;
 
-    h4 {
-        padding: 30px 0 30px 10px;
+                @media screen and (min-width: 1024px) {
+                    font-size: 1.8rem;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    width: 1440px;
+                    margin-left: -12px;
+                }
+            }
 
-        &::after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 5px;
-            border-bottom: 5px solid $tertiary-color;
-            display: block;
-        }
+            .menu-title-heart {
+                margin-left: -87px;
+                position: absolute;
+                margin-top: 8px;
+                font-size: 30px;
+                width: 70%;
 
-        @media screen and (min-width: 1024px) {
-            font-size: 1.3rem;
-        }
-    }
-
-    &-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-}
-
-.plate {
-    width: 95%;
-    background-color: $text-white;
-    border-radius: 15px;
-    display: flex;
-    gap: 5px;
-    @include menu-shadow;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-
-    &:hover {
-        .plate-check {
-            transform: translateX(-62px);
-            transition: transform 750ms ease;
+                @media screen and (min-width: 1024px) {
+                    margin-left: -76px;
+                }
+            }
 
             i {
-                transform: rotate(360deg);
-                transition: transform 1000ms ease;
+                margin-left: -87px;
+                position: absolute;
+                margin-top: 8px;
+                font-size: 30px;
+                width: 70%;
+
+                @media screen and (min-width: 1024px) {
+                    margin-left: -485px;
+                }
             }
-        }
 
-        .plate-price {
-            transform: translateX(-62px);
-            transition: transform 750ms ease;
-        }
-    }
+            .heart-main {
+                top: 14px;
+                left: 80%;
 
-    &-content {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    &-title {
-        width: 255px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 9px;
-
-        h3 {
-            width: 80%;
-            color: $text-black;
-            @include text-font;
-            font-weight: 600;
-            font-size: 1rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+                @media screen and (min-width: 1024px) {
+                    left: 90%;
+                }
+            }
 
             @media screen and (min-width: 1024px) {
-                width: 600px;
+                left: -20px;
+            }
+        }
+    }
+
+    .menu-plates {
+        padding: 0 5px;
+
+        h4 {
+            padding: 30px 0 30px 10px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 5px;
+                border-bottom: 5px solid $tertiary-color;
+                display: block;
+            }
+
+            @media screen and (min-width: 1024px) {
                 font-size: 1.3rem;
             }
         }
 
-        p {
-            width: 100%;
-            color: $text-black;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            font-size: 13px;
-
-
-            @media screen and (min-width: 380px) {
-                overflow: visible;
-            }
-
-            @media screen and (min-width: 1024px) {
-                font-size: 1.25rem;
-            }
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
         }
     }
 
-    &-price {
-        color: $text-black;
-        font-weight: 600;
-        position: absolute;
-        top: 40px;
-        right: 20px;
-        transform: translateX(0);
-        transition: transform 750ms ease;
-    }
-
-    &-check {
-        background-color: $tertiary-color;
-        min-width: 60px;
-        height: 77px;
-        /*Borders*/
-        border-radius: 0 15px 15px 0;
-        /*display*/
+    .plate {
+        width: 95%;
+        background-color: $text-white;
+        border-radius: 15px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        /*Position*/
-        position: absolute;
-        top: 0;
-        right: -62px;
-        transform: translateX(0);
-        transition: transform 750ms ease;
+        gap: 5px;
+        @include menu-shadow;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
 
-        i {
-            color: $text-white;
+        &:hover {
+            .plate-check {
+                transform: translateX(-62px);
+                transition: transform 750ms ease;
+
+                i {
+                    transform: rotate(360deg);
+                    transition: transform 1000ms ease;
+                }
+            }
+
+            .plate-price {
+                transform: translateX(-62px);
+                transition: transform 750ms ease;
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &-title {
+            width: 255px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 9px;
+
+            h3 {
+                width: 80%;
+                color: $text-black;
+                @include text-font;
+                font-weight: 600;
+                font-size: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                @media screen and (min-width: 1024px) {
+                    width: 600px;
+                    font-size: 1.3rem;
+                }
+            }
+
+            p {
+                width: 100%;
+                color: $text-black;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 13px;
+
+
+                @media screen and (min-width: 380px) {
+                    overflow: visible;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+
+        &-price {
+            color: $text-black;
+            font-weight: 600;
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            transform: translateX(0);
+            transition: transform 750ms ease;
+        }
+
+        &-check {
+            background-color: $tertiary-color;
+            min-width: 60px;
+            height: 77px;
+            /*Borders*/
+            border-radius: 0 15px 15px 0;
+            /*display*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*Position*/
+            position: absolute;
+            top: 0;
+            right: -62px;
+            transform: translateX(0);
+            transition: transform 750ms ease;
+
+            i {
+                color: $text-white;
+            }
         }
     }
-}
 
-/*Boutton pour commander*/
+    /*Boutton pour commander*/
 
-.btn-purple {
-    display: block;
-    margin: 30px auto 0;
-    width: 216px;
-    height: 50px;
-    background: linear-gradient($secondary-color, $primary-color);
-    border: none;
-    border-radius: 50px;
-    padding: 0 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    color: $text-white;
-    cursor: pointer;
-    box-shadow: 0 0 10px 0 darken(#f6f6f6, 26%);
-}
-
-/*Soulignement  des entrées, platset desserts*/
-
-.underline {
-    width: 12%;
-    height: 4px;
-    background-color: $tertiary-color;
-    margin-top: -6px;
-    margin-left: 15px;
-
-    @media screen and (min-width: 1024px) {
-        width: 3.8%;
+    .btn-purple {
+        display: block;
+        margin: 30px auto 0;
+        width: 216px;
+        height: 50px;
+        background: linear-gradient($secondary-color, $primary-color);
+        border: none;
+        border-radius: 50px;
+        padding: 0 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $text-white;
+        cursor: pointer;
+        box-shadow: 0 0 10px 0 darken(#f6f6f6, 26%);
     }
-}
-/*Animation*/
 
-.menu-title-heart {
+    /*Soulignement  des entrées, platset desserts*/
 
-    .fa-regular:active {
-   color: #9356dc;
-   }
- }
-
- .entrees-anim {
-   opacity: 0;
-   animation: descend 2s ease forwards;
- }
-
- @keyframes descend {
-   from {
-     transform: translateY(-100%); /* Commence en haut (en dehors de l'écran) */
-     opacity: 0;
-   }
-   to {
-     transform: translateY(0); /* Se termine en bas de l'écran */
-     opacity: 1;
-   }
- }
-
- // /*Les plats*/
- .plats-anim {
-   opacity: 0;
-   animation: descend-two 2s ease forwards 2500ms;
- }
-
- @keyframes descend-two {
-   from {
-     transform: translateY(-100%); /* Commence en haut (en dehors de l'écran) */
-     opacity: 0;
-   }
-   to {
-     transform: translateY(0); /* Se termine en bas de l'écran */
-     opacity: 1;
-   }
- }
-
- //   /*Les desserts*/
- .desserts-anim {
-   opacity: 0;
-   animation: descend-three 2s ease forwards 4500ms;
- }
-
- @keyframes descend-three {
-   from {
-     transform: translateY(-100%); /* Commence en haut (en dehors de l'écran) */
-     opacity: 0;
-   }
-   to {
-     transform: translateY(0); /* Se termine en bas de l'écran */
-     opacity: 1;
-   }
- }
-
-/*Mise en forme du footer*/
-
-footer {
-    width: 100%;
-    background-color: #353535;
-    padding: 22px;
-    position: relative;
-
-    & h3 {
-        color: white;
-        margin: 0 0 15px 10px;
+    .underline {
+        width: 12%;
+        height: 4px;
+        background-color: $tertiary-color;
+        margin-top: -6px;
+        margin-left: 15px;
 
         @media screen and (min-width: 1024px) {
-            display: flex;
-            justify-content: flex-end;
-            position: absolute;
-            top: 68px;
-            right: 32px;
+            width: 3.8%;
         }
     }
-}
+
+    /*Animation*/
+
+    .menu-title-heart {
+
+        .fa-regular:active {
+            color: #9356dc;
+        }
+    }
+
+    .entrees-anim {
+        opacity: 0;
+        animation: descend 2s ease forwards;
+    }
+
+    @keyframes descend {
+        from {
+            transform: translateY(-100%);
+            /* Commence en haut (en dehors de l'écran) */
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            /* Se termine en bas de l'écran */
+            opacity: 1;
+        }
+    }
+
+    // /*Les plats*/
+    .plats-anim {
+        opacity: 0;
+        animation: descend-two 2s ease forwards 2500ms;
+    }
+
+    @keyframes descend-two {
+        from {
+            transform: translateY(-100%);
+            /* Commence en haut (en dehors de l'écran) */
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            /* Se termine en bas de l'écran */
+            opacity: 1;
+        }
+    }
+
+    //   /*Les desserts*/
+    .desserts-anim {
+        opacity: 0;
+        animation: descend-three 2s ease forwards 4500ms;
+    }
+
+    @keyframes descend-three {
+        from {
+            transform: translateY(-100%);
+            /* Commence en haut (en dehors de l'écran) */
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            /* Se termine en bas de l'écran */
+            opacity: 1;
+        }
+    }
+
+    /*Mise en forme du footer*/
+
+    footer {
+        width: 100%;
+        background-color: #353535;
+        padding: 22px;
+        position: relative;
+
+        & h3 {
+            color: white;
+            margin: 0 0 15px 10px;
+
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                justify-content: flex-end;
+                position: absolute;
+                top: 68px;
+                right: 32px;
+            }
+        }
+    }
+
     & .footer-container {
         display: flex;
         flex-direction: column;
@@ -391,4 +425,3 @@ footer {
         margin: 0 auto;
     }
 }
-
