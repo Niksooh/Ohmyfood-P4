@@ -72,14 +72,15 @@ p {
   position: absolute;
   top: 0%;
   left: 0%;
+  font-size: 20px;
 }
 .cards .fa-solid {
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  background: linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+  z-index: 10;
   -webkit-background-clip: text;
   background-clip: text;
-  transition: all 5s ease-in-out;
-  opacity: 0;
-  background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
-  z-index: 10;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
@@ -336,7 +337,7 @@ header i {
   left: -14px;
 }
 .all-steps i {
-  font-size: 20px;
+  font-size: 40px;
   color: #848484;
   margin-right: 10px;
 }
@@ -417,12 +418,14 @@ header i {
   color: #000000;
 }
 
-.cards-text.menu-title-heart {
+.cards-texts.menu-title-heart {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.cards-text.menu-title-heartspan {
+.cards-texts.menu-title-heart span {
   width: 20px;
+  margin-right: 15px;
 }
 
 .citie-restaurant {

@@ -177,7 +177,7 @@ header {
 
 
     & i {
-      font-size: 20px;
+      font-size: 40px;
       color: darken(#eaeaea, 40%);
       margin-right: 10px;
     }
@@ -259,12 +259,14 @@ header {
     color: $text-black;
   }
 
-  .cards-text.menu-title-heart {
+  .cards-texts.menu-title-heart {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    &span {
+    span {
       width: 20px;
+      margin-right: 15px;
     }
   }
 

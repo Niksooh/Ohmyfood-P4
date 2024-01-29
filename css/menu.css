@@ -73,14 +73,15 @@ p {
   position: absolute;
   top: 0%;
   left: 0%;
+  font-size: 20px;
 }
 .cards .fa-solid {
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  background: linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+  z-index: 10;
   -webkit-background-clip: text;
   background-clip: text;
-  transition: all 5s ease-in-out;
-  opacity: 0;
-  background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
-  z-index: 10;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
@@ -213,12 +214,15 @@ header a {
   /*Boutton pour commander*/
   /*Soulignement  des entrées, platset desserts*/
   /*Animation*/
-  /*Mise en forme du footer*/
 }
 @media screen and (min-width: 1024px) {
   .menu {
-    width: 50px;
-    margin-left: 250px;
+    width: 80%;
+    margin-left: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
   }
   .menu .menu-img {
     margin-bottom: -62px;
@@ -243,13 +247,23 @@ header a {
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
-    margin-left: 15px;
+    justify-content: center;
   }
   .menu .menu-title h1 {
     font-family: "Shrikhand", cursive;
     display: flex;
     justify-content: space-between;
     margin-left: 0px;
+    position: relative;
+  }
+  .menu .menu-title h1 i {
+    display: block;
+    padding-left: 10px;
+    position: absolute;
+    font-size: 30px;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
   }
 }
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
@@ -258,39 +272,14 @@ header a {
     display: flex;
     justify-content: center;
     align-content: center;
-    width: 1440px;
-    margin-left: -12px;
   }
 }
 @media screen and (min-width: 1024px) {
   .menu .menu-title .menu-title-heart {
-    margin-left: -87px;
-    position: absolute;
     margin-top: 8px;
     font-size: 30px;
-    width: 70%;
+    position: relative;
   }
-}
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
-  .menu .menu-title .menu-title-heart {
-    margin-left: -76px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .menu .menu-title i {
-    margin-left: -87px;
-    position: absolute;
-    margin-top: 8px;
-    font-size: 30px;
-    width: 70%;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
-  .menu .menu-title i {
-    margin-left: -485px;
-  }
-}
-@media screen and (min-width: 1024px) {
   .menu .menu-title .heart-main {
     top: 14px;
     left: 80%;
@@ -299,11 +288,6 @@ header a {
 @media screen and (min-width: 1024px) and (min-width: 1024px) {
   .menu .menu-title .heart-main {
     left: 90%;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
-  .menu .menu-title {
-    left: -20px;
   }
 }
 .menu .menu-plates {
@@ -509,18 +493,20 @@ header a {
     opacity: 1;
   }
 }
-.menu footer {
+
+/*Mise en forme du footer*/
+footer {
   width: 100%;
   background-color: #353535;
   padding: 22px;
   position: relative;
 }
-.menu footer h3 {
+footer h3 {
   color: white;
   margin: 0 0 15px 10px;
 }
 @media screen and (min-width: 1024px) {
-  .menu footer h3 {
+  footer h3 {
     display: flex;
     justify-content: flex-end;
     position: absolute;
@@ -528,19 +514,20 @@ header a {
     right: 32px;
   }
 }
-.menu .footer-container {
+
+.footer-container {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 1024px) {
-  .menu .footer-container {
+  .footer-container {
     flex-direction: row;
     justify-content: flex-end;
     margin-top: 50px;
     margin-right: 200px;
   }
 }
-.menu .footer-container a {
+.footer-container a {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -549,22 +536,16 @@ header a {
   position: relative;
 }
 @media screen and (min-width: 1024px) {
-  .menu .footer-container a {
+  .footer-container a {
     margin: 0 10px;
   }
 }
-.menu .footer-container a i {
+.footer-container a i {
   width: 22px;
   font-size: 16px;
 }
 @media screen and (min-width: 1024px) {
-  .menu .footer-container a i {
+  .footer-container a i {
     padding-right: 5px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .menu {
-    width: 1440px;
-    margin: 0 auto;
   }
 }/*# sourceMappingURL=menu.css.map */

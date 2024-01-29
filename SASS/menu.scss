@@ -42,8 +42,13 @@ header {
     padding-bottom: 30px;
 
     @media screen and (min-width: 1024px) {
-        width: 50px;
-        margin-left: 250px;
+        width: 80%;
+        margin-left: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+
 
         .menu-img {
             margin-bottom: -62px;
@@ -66,47 +71,42 @@ header {
             justify-content: space-between;
             align-items: center;
             padding-top: 40px;
-            margin-left: 15px;
+            justify-content: center;
+
+
 
             h1 {
                 @include title-font;
                 display: flex;
                 justify-content: space-between;
                 margin-left: 0px;
+                position: relative;
+
+                i {
+                    display: block;
+                    padding-left: 10px;
+                    position: absolute;
+                    font-size: 30px;
+                    top: 50%;
+                    left: 100%;
+                    transform: translateY(-50%);
+                }
 
                 @media screen and (min-width: 1024px) {
                     font-size: 1.8rem;
                     display: flex;
                     justify-content: center;
                     align-content: center;
-                    width: 1440px;
-                    margin-left: -12px;
                 }
             }
 
             .menu-title-heart {
-                margin-left: -87px;
-                position: absolute;
                 margin-top: 8px;
                 font-size: 30px;
-                width: 70%;
-
-                @media screen and (min-width: 1024px) {
-                    margin-left: -76px;
-                }
+                position: relative
             }
 
-            i {
-                margin-left: -87px;
-                position: absolute;
-                margin-top: 8px;
-                font-size: 30px;
-                width: 70%;
 
-                @media screen and (min-width: 1024px) {
-                    margin-left: -485px;
-                }
-            }
 
             .heart-main {
                 top: 14px;
@@ -115,10 +115,6 @@ header {
                 @media screen and (min-width: 1024px) {
                     left: 90%;
                 }
-            }
-
-            @media screen and (min-width: 1024px) {
-                left: -20px;
             }
         }
     }
@@ -361,67 +357,62 @@ header {
             opacity: 1;
         }
     }
+}
 
-    /*Mise en forme du footer*/
+/*Mise en forme du footer*/
 
-    footer {
-        width: 100%;
-        background-color: #353535;
-        padding: 22px;
-        position: relative;
+footer {
+    width: 100%;
+    background-color: #353535;
+    padding: 22px;
+    position: relative;
 
-        & h3 {
-            color: white;
-            margin: 0 0 15px 10px;
-
-            @media screen and (min-width: 1024px) {
-                display: flex;
-                justify-content: flex-end;
-                position: absolute;
-                top: 68px;
-                right: 32px;
-            }
-        }
-    }
-
-    & .footer-container {
-        display: flex;
-        flex-direction: column;
+    & h3 {
+        color: white;
+        margin: 0 0 15px 10px;
 
         @media screen and (min-width: 1024px) {
-            flex-direction: row;
+            display: flex;
             justify-content: flex-end;
-            margin-top: 50px;
-            margin-right: 200px;
-        }
-
-        & a {
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem;
-            font-weight: 500;
-            color: $text-white;
-            margin: 8px 10px;
-            position: relative;
-
-            @media screen and (min-width: 1024px) {
-                margin: 0 10px;
-            }
-
-            i {
-                width: 22px;
-                font-size: 16px;
-            }
-
-            & i {
-                @media screen and (min-width: 1024px) {
-                    padding-right: 5px;
-                }
-            }
+            position: absolute;
+            top: 68px;
+            right: 32px;
         }
     }
+}
+
+ .footer-container {
+    display: flex;
+    flex-direction: column;
 
     @media screen and (min-width: 1024px) {
-        width: 1440px;
-        margin: 0 auto;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 50px;
+        margin-right: 200px;
+    }
+
+    & a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $text-white;
+        margin: 8px 10px;
+        position: relative;
+
+        @media screen and (min-width: 1024px) {
+            margin: 0 10px;
+        }
+
+        i {
+            width: 22px;
+            font-size: 16px;
+        }
+
+        & i {
+            @media screen and (min-width: 1024px) {
+                padding-right: 5px;
+            }
+        }
     }
 }
