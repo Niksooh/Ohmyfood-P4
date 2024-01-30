@@ -16,10 +16,17 @@ body {
 img {
   width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  img {
+    height: 600px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 
 h1 {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 900;
   color: black;
   text-align: center;
@@ -100,6 +107,7 @@ p {
   left: 0;
   animation: loader 3s ease-in-out;
   animation-fill-mode: both;
+  pointer-events: none;
 }
 .loader h1 {
   font-family: "Shrikhand", cursive;
@@ -121,7 +129,6 @@ p {
   left: 50%;
   margin-left: -10px;
   animation: 3s infinite linear;
-  pointer-events: none;
 }
 
 .loader span:nth-child(2) {

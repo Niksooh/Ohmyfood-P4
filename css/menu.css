@@ -17,10 +17,17 @@ body {
 img {
   width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  img {
+    height: 600px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 
 h1 {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 900;
   color: black;
   text-align: center;
@@ -101,6 +108,7 @@ p {
   left: 0;
   animation: loader 3s ease-in-out;
   animation-fill-mode: both;
+  pointer-events: none;
 }
 .loader h1 {
   font-family: "Shrikhand", cursive;
@@ -122,7 +130,6 @@ p {
   left: 50%;
   margin-left: -10px;
   animation: 3s infinite linear;
-  pointer-events: none;
 }
 
 .loader span:nth-child(2) {
@@ -186,6 +193,8 @@ header {
 }
 header img {
   height: 40px;
+  -o-object-fit: none;
+     object-fit: none;
 }
 header a {
   display: flex;
@@ -211,92 +220,80 @@ header a {
   background-color: #f6f6f6;
   border-radius: 20px 20px 0 0;
   padding-bottom: 30px;
-  /*Boutton pour commander*/
-  /*Soulignement  des entrées, platset desserts*/
-  /*Animation*/
+  padding-top: 40px;
+  margin-top: -130px;
+  position: relative;
 }
 @media screen and (min-width: 1024px) {
   .menu {
-    width: 80%;
-    margin-left: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
-  }
-  .menu .menu-img {
-    margin-bottom: -62px;
-    z-index: -10;
-    position: relative;
-  }
-  .menu .menu-img img {
-    width: 100%;
-    height: 238px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    margin: auto;
+    margin-top: -30px;
+    width: 50%;
   }
 }
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
-  .menu .menu-img img {
-    height: 530px;
-  }
+.menu .menu-img {
+  z-index: -10;
+  position: relative;
+}
+.menu .menu-title {
+  display: flex;
+  margin-left: 15px;
 }
 @media screen and (min-width: 1024px) {
   .menu .menu-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 40px;
-    justify-content: center;
-  }
-  .menu .menu-title h1 {
-    font-family: "Shrikhand", cursive;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 0px;
-    position: relative;
-  }
-  .menu .menu-title h1 i {
-    display: block;
-    padding-left: 10px;
-    position: absolute;
-    font-size: 30px;
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%);
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
-  .menu .menu-title h1 {
-    font-size: 1.8rem;
     display: flex;
     justify-content: center;
     align-content: center;
   }
 }
+.menu .menu-title h1 {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0px;
+  position: relative;
+  font-weight: 900;
+  font-size: 27px;
+}
+.menu .menu-title h1 i {
+  display: block;
+  padding-left: 10px;
+  position: absolute;
+  font-size: 25px;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+}
 @media screen and (min-width: 1024px) {
-  .menu .menu-title .menu-title-heart {
-    margin-top: 8px;
-    font-size: 30px;
-    position: relative;
-  }
-  .menu .menu-title .heart-main {
-    top: 14px;
-    left: 80%;
+  .menu .menu-title h1 {
+    font-size: 1.8rem;
   }
 }
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
+.menu .menu-title .menu-title-heart {
+  margin-top: 8px;
+  font-size: 30px;
+  position: relative;
+}
+.menu .menu-title .heart-main {
+  top: 14px;
+  left: 80%;
+}
+@media screen and (min-width: 1024px) {
   .menu .menu-title .heart-main {
     left: 90%;
   }
 }
-.menu .menu-plates {
+
+.menu-plates {
   padding: 0 5px;
 }
-.menu .menu-plates h4 {
+.menu-plates h4 {
   padding: 30px 0 30px 10px;
 }
-.menu .menu-plates h4::after {
+.menu-plates h4::after {
   content: "";
   position: absolute;
   width: 30px;
@@ -305,18 +302,19 @@ header a {
   display: block;
 }
 @media screen and (min-width: 1024px) {
-  .menu .menu-plates h4 {
+  .menu-plates h4 {
     font-size: 1.3rem;
   }
 }
-.menu .menu-plates-content {
+.menu-plates-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-.menu .plate {
+
+.plate {
   width: 95%;
   background-color: #ffffff;
   border-radius: 15px;
@@ -327,65 +325,65 @@ header a {
   overflow: hidden;
   cursor: pointer;
 }
-.menu .plate:hover .plate-check {
-  transform: translateX(-62px);
-  transition: transform 750ms ease;
+.plate:hover .plate-check {
+  transform: translateX(-50px);
+  transition: transform 600ms ease;
 }
-.menu .plate:hover .plate-check i {
+.plate:hover .plate-check i {
   transform: rotate(360deg);
   transition: transform 1000ms ease;
 }
-.menu .plate:hover .plate-price {
-  transform: translateX(-62px);
+.plate:hover .plate-price {
+  transform: translateX(-35px);
   transition: transform 750ms ease;
 }
-.menu .plate-content {
+.plate-content {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.menu .plate-title {
-  width: 255px;
+.plate-title {
+  width: 345px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 9px;
 }
-.menu .plate-title h3 {
+.plate-title h3 {
   width: 80%;
   color: #000000;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 17px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 @media screen and (min-width: 1024px) {
-  .menu .plate-title h3 {
+  .plate-title h3 {
     width: 600px;
     font-size: 1.3rem;
   }
 }
-.menu .plate-title p {
+.plate-title p {
   width: 100%;
   color: #000000;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 13px;
+  font-size: 14px;
 }
 @media screen and (min-width: 380px) {
-  .menu .plate-title p {
+  .plate-title p {
     overflow: visible;
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu .plate-title p {
+  .plate-title p {
     font-size: 1.25rem;
   }
 }
-.menu .plate-price {
+.plate-price {
   color: #000000;
   font-weight: 600;
   position: absolute;
@@ -394,7 +392,7 @@ header a {
   transform: translateX(0);
   transition: transform 750ms ease;
 }
-.menu .plate-check {
+.plate-check {
   background-color: #99e2d0;
   min-width: 60px;
   height: 77px;
@@ -411,10 +409,12 @@ header a {
   transform: translateX(0);
   transition: transform 750ms ease;
 }
-.menu .plate-check i {
+.plate-check i {
   color: #ffffff;
 }
-.menu .btn-purple {
+
+/*Boutton pour commander*/
+.btn-purple {
   display: block;
   margin: 30px auto 0;
   width: 216px;
@@ -430,7 +430,9 @@ header a {
   cursor: pointer;
   box-shadow: 0 0 10px 0 #b4b4b4;
 }
-.menu .underline {
+
+/*Soulignement  des entrées, platset desserts*/
+.underline {
   width: 12%;
   height: 4px;
   background-color: #99e2d0;
@@ -438,17 +440,21 @@ header a {
   margin-left: 15px;
 }
 @media screen and (min-width: 1024px) {
-  .menu .underline {
+  .underline {
     width: 3.8%;
   }
 }
-.menu .menu-title-heart .fa-regular:active {
+
+/*Animation*/
+.menu-title-heart .fa-regular:active {
   color: #9356dc;
 }
-.menu .entrees-anim {
+
+.entrees-anim {
   opacity: 0;
   animation: descend 2s ease forwards;
 }
+
 @keyframes descend {
   from {
     transform: translateY(-100%);
@@ -461,10 +467,11 @@ header a {
     opacity: 1;
   }
 }
-.menu .plats-anim {
+.plats-anim {
   opacity: 0;
   animation: descend-two 2s ease forwards 2500ms;
 }
+
 @keyframes descend-two {
   from {
     transform: translateY(-100%);
@@ -477,10 +484,11 @@ header a {
     opacity: 1;
   }
 }
-.menu .desserts-anim {
+.desserts-anim {
   opacity: 0;
   animation: descend-three 2s ease forwards 4500ms;
 }
+
 @keyframes descend-three {
   from {
     transform: translateY(-100%);
@@ -493,7 +501,6 @@ header a {
     opacity: 1;
   }
 }
-
 /*Mise en forme du footer*/
 footer {
   width: 100%;

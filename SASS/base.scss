@@ -15,11 +15,16 @@ body {
 
 img{
   width: 100%;
+
+  @media screen and (min-width: 1024px) {
+    height: 600px;
+    object-fit: cover;
+  }
 }
 
 h1 {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 900;
   color: black;
   text-align: center;
@@ -150,6 +155,7 @@ $text-white: #ffffff;
   left: 0;
   animation: loader 3s ease-in-out;
   animation-fill-mode: both;
+  pointer-events: none;
 
   & h1 {
     @include title-font;
@@ -160,6 +166,7 @@ $text-white: #ffffff;
     text-align: center;
     margin-top: 50vh;
     padding-bottom: 20px;
+
   }
 }
 
@@ -172,7 +179,7 @@ $text-white: #ffffff;
   left: 50%;
   margin-left: -10px;
   animation: 3s infinite linear;
-  pointer-events: none;
+
 }
 
 .loader span:nth-child(2) {
