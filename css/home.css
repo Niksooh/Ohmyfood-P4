@@ -40,7 +40,9 @@ h2 {
 }
 @media screen and (min-width: 1024px) {
   h2 {
-    margin: 40px 0 20px 135px;
+    display: flex;
+    position: relative;
+    left: 13%;
   }
 }
 
@@ -516,7 +518,7 @@ footer .footer-container a i {
 }
 @media screen and (min-width: 1024px) {
   footer {
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
   }
 }/*# sourceMappingURL=home.css.map */
