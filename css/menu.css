@@ -321,35 +321,32 @@ header a {
   background-color: #ffffff;
   border-radius: 15px;
   display: flex;
-  gap: 5px;
   box-shadow: 0px 4px 15px 0 #e6e6e6;
-  position: relative;
   overflow: hidden;
   cursor: pointer;
 }
 .plate:hover .plate-check {
-  transform: translateX(-50px);
-  transition: transform 600ms ease;
+  margin-right: 0;
 }
 .plate:hover .plate-check i {
   transform: rotate(360deg);
   transition: transform 1000ms ease;
 }
-.plate:hover .plate-price {
-  transform: translateX(-35px);
-  transition: transform 750ms ease;
-}
 .plate-content {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 .plate-title {
-  width: 345px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .plate-title h3 {
   width: 80%;
@@ -388,15 +385,10 @@ header a {
 .plate-price {
   color: #000000;
   font-weight: 600;
-  position: absolute;
-  top: 40px;
-  right: 20px;
-  transform: translateX(0);
-  transition: transform 750ms ease;
 }
 .plate-check {
   background-color: #99e2d0;
-  min-width: 60px;
+  width: 60px;
   height: 77px;
   /*Borders*/
   border-radius: 0 15px 15px 0;
@@ -404,12 +396,8 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*Position*/
-  position: absolute;
-  top: 0;
-  right: -62px;
-  transform: translateX(0);
-  transition: transform 750ms ease;
+  margin-right: -60px;
+  flex-shrink: 0;
 }
 .plate-check i {
   color: #ffffff;

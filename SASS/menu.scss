@@ -148,26 +148,18 @@ header {
     background-color: $text-white;
     border-radius: 15px;
     display: flex;
-    gap: 5px;
     @include menu-shadow;
-    position: relative;
     overflow: hidden;
     cursor: pointer;
 
     &:hover {
         .plate-check {
-            transform: translateX(-50px);
-            transition: transform 600ms ease;
+            margin-right: 0;
 
             i {
                 transform: rotate(360deg);
                 transition: transform 1000ms ease;
             }
-        }
-
-        .plate-price {
-            transform: translateX(-35px);
-            transition: transform 750ms ease;
         }
     }
 
@@ -175,14 +167,18 @@ header {
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     &-title {
-        width: 345px;
         display: flex;
         flex-direction: column;
         gap: 10px;
         padding: 9px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         h3 {
             width: 80%;
@@ -222,16 +218,11 @@ header {
     &-price {
         color: $text-black;
         font-weight: 600;
-        position: absolute;
-        top: 40px;
-        right: 20px;
-        transform: translateX(0);
-        transition: transform 750ms ease;
     }
 
     &-check {
         background-color: $tertiary-color;
-        min-width: 60px;
+        width: 60px;
         height: 77px;
         /*Borders*/
         border-radius: 0 15px 15px 0;
@@ -239,13 +230,8 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        /*Position*/
-        position: absolute;
-        top: 0;
-        right: -62px;
-        transform: translateX(0);
-        transition: transform 750ms ease;
-
+        margin-right: -60px;
+        flex-shrink: 0;
         i {
             color: $text-white;
         }
