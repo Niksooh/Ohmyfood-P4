@@ -82,6 +82,7 @@ p {
   top: 0%;
   left: 0%;
   font-size: 20px;
+  color: black;
 }
 .cards .fa-solid {
   transition: all 1s ease-in-out;

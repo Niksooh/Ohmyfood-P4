@@ -82,6 +82,7 @@ p {
   top: 0%;
   left: 0%;
   font-size: 20px;
+  color: black;
 }
 .cards .fa-solid {
   transition: all 1s ease-in-out;
@@ -348,7 +349,7 @@ header i {
   left: -14px;
 }
 .all-steps i {
-  font-size: 40px;
+  font-size: 28px;
   color: #848484;
   margin-right: 10px;
 }
