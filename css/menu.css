@@ -275,27 +275,6 @@ header a {
     font-size: 1.8rem;
   }
 }
-.menu .menu-title h1 .fa-heart {
-  display: block;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  font-size: 20px;
-  color: black;
-}
-.menu .menu-title h1 .fa-solid {
-  transition: all 1s ease-in-out;
-  opacity: 0;
-  background: linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
-  z-index: 10;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
-}
-.menu .menu-title h1 .fa-solid:hover {
-  opacity: 1;
-}
 .menu .menu-title .menu-title-heart {
   margin-top: 8px;
   font-size: 30px;
@@ -349,7 +328,6 @@ header a {
 }
 .plate:hover .plate-check {
   margin-right: 0;
-  transition: all 1s;
 }
 .plate:hover .plate-check i {
   transform: rotate(360deg);
@@ -422,6 +400,7 @@ header a {
   align-items: center;
   margin-right: -60px;
   flex-shrink: 0;
+  transition: all 1s;
 }
 .plate-check i {
   color: #ffffff;
