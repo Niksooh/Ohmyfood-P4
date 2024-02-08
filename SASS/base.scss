@@ -156,7 +156,7 @@ $text-white: #ffffff;
   bottom: 0;
   left: 0;
   animation: loader 3s ease-in-out;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
   pointer-events: none;
 
   & h1 {
@@ -202,12 +202,12 @@ $text-white: #ffffff;
 @keyframes loader {
   0% {
     background-color: rgba(0, 0, 0, 0.8);
-    display: block;
+    opacity: 1;
   }
 
   100% {
     background-color: rgba(0, 0, 0, 0);
-    display: none;
+    opacity: 0;
   }
 }
 
