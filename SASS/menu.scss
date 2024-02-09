@@ -219,6 +219,10 @@ header {
     &-price {
         color: $text-black;
         font-weight: 600;
+
+        p {
+            margin-left: 20px;
+        }
     }
 
     &-check {
