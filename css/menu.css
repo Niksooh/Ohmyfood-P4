@@ -840,7 +840,7 @@ p {
   font-weight: 600;
 }
 .plate-price p {
-  margin-left: 20px;
+  margin-left: -50px;
 }
 .plate-check {
   background-color: #99e2d0;
