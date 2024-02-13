@@ -1,7 +1,7 @@
 @import 'base';
 @import 'layout';
 @import 'button';
-
+@import 'animation';
 
 /*Mise en forme du menu*/
 
@@ -226,73 +226,5 @@
 
     @media screen and (min-width: 1024px) {
         width: 3.8%;
-    }
-}
-
-/*Animation*/
-
-.menu-title-heart {
-
-    .fa-regular:active {
-        color: #9356dc;
-    }
-}
-
-.entrees-anim {
-    opacity: 0;
-    animation: descend 2s ease forwards;
-}
-
-@keyframes descend {
-    from {
-        transform: translateY(-100%);
-        /* Commence en haut (en dehors de l'écran) */
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        /* Se termine en bas de l'écran */
-        opacity: 1;
-    }
-}
-
-// /*Les plats*/
-.plats-anim {
-    opacity: 0;
-    animation: descend-two 2s ease forwards 2500ms;
-}
-
-@keyframes descend-two {
-    from {
-        transform: translateY(-100%);
-        /* Commence en haut (en dehors de l'écran) */
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        /* Se termine en bas de l'écran */
-        opacity: 1;
-    }
-}
-
-//   /*Les desserts*/
-.desserts-anim {
-    opacity: 0;
-    animation: descend-three 2s ease forwards 4500ms;
-}
-
-@keyframes descend-three {
-    from {
-        transform: translateY(-100%);
-        /* Commence en haut (en dehors de l'écran) */
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        /* Se termine en bas de l'écran */
-        opacity: 1;
     }
 }
