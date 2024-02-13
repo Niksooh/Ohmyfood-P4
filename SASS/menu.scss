@@ -124,11 +124,6 @@
     &:hover {
         .plate-check {
             margin-right: 0;
-
-            i {
-                transform: rotate(360deg);
-                transition: transform 1000ms ease;
-            }
         }
     }
 

@@ -780,10 +780,6 @@ p {
 .plate:hover .plate-check {
   margin-right: 0;
 }
-.plate:hover .plate-check i {
-  transform: rotate(360deg);
-  transition: transform 1000ms ease;
-}
 .plate-content {
   display: flex;
   flex-direction: row;
