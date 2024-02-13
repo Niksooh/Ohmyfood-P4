@@ -72,11 +72,11 @@ p {
   margin: 30px 5px 0 0;
 }
 
-.cards span {
+.cards .menu span {
   display: flex;
   position: relative;
 }
-.cards .fa-heart {
+.cards .menu .fa-heart {
   display: block;
   position: absolute;
   top: 0%;
@@ -84,7 +84,7 @@ p {
   font-size: 20px;
   color: black;
 }
-.cards .fa-solid {
+.cards .menu .fa-solid {
   transition: all 1s ease-in-out;
   opacity: 0;
   background: linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
@@ -94,7 +94,7 @@ p {
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
-.cards .fa-solid:hover {
+.cards .menu .fa-solid:hover {
   opacity: 1;
 }
 

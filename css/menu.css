@@ -73,11 +73,11 @@ p {
   margin: 30px 5px 0 0;
 }
 
-.cards span {
+.cards span, .menu span {
   display: flex;
   position: relative;
 }
-.cards .fa-heart {
+.cards .fa-heart, .menu .fa-heart {
   display: block;
   position: absolute;
   top: 0%;
@@ -85,7 +85,7 @@ p {
   font-size: 20px;
   color: black;
 }
-.cards .fa-solid {
+.cards .fa-solid, .menu .fa-solid {
   transition: all 1s ease-in-out;
   opacity: 0;
   background: linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
@@ -95,7 +95,7 @@ p {
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
-.cards .fa-solid:hover {
+.cards .fa-solid:hover, .menu .fa-solid:hover {
   opacity: 1;
 }
 
@@ -407,24 +407,6 @@ header a {
 }
 .plate-check i {
   color: #ffffff;
-}
-
-/*Boutton pour commander*/
-.btn-purple {
-  display: block;
-  margin: 30px auto 0;
-  width: 216px;
-  height: 50px;
-  background: linear-gradient(#ff79da, #9356dc);
-  border: none;
-  border-radius: 50px;
-  padding: 0 20px;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #ffffff;
-  cursor: pointer;
-  box-shadow: 0 0 10px 0 #b4b4b4;
 }
 
 /*Soulignement  des entrées, platset desserts*/
