@@ -72,13 +72,11 @@ p {
   margin: 30px 5px 0 0;
 }
 
-.cards span,
-.menu span {
+.cards span, .menu span {
   display: flex;
   position: relative;
 }
-.cards .fa-heart,
-.menu .fa-heart {
+.cards .fa-heart, .menu .fa-heart {
   display: block;
   position: absolute;
   top: 0%;
@@ -86,8 +84,7 @@ p {
   font-size: 20px;
   color: black;
 }
-.cards .fa-solid,
-.menu .fa-solid {
+.cards .fa-solid, .menu .fa-solid {
   transition: all 1s ease-in-out;
   opacity: 0;
   background: linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
@@ -97,8 +94,7 @@ p {
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
-.cards .fa-solid:hover,
-.menu .fa-solid:hover {
+.cards .fa-solid:hover, .menu .fa-solid:hover {
   opacity: 1;
 }
 
