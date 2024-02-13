@@ -1,0 +1,202 @@
+@import 'base';
+
+// Animation coeur //
+
+.cards, .menu {
+
+    span {
+      display: flex;
+      position: relative;
+    }
+
+    .fa-heart {
+      display: block;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      font-size: 20px;
+      color: $text-black;
+    }
+
+    .fa-solid {
+      transition: all 1s ease-in-out;
+      opacity: 0;
+      background: linear-gradient(13deg, $secondary-color 0%, $primary-color 66%);
+      z-index: 10;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer;
+
+    }
+
+    .fa-solid:hover {
+      opacity: 1;
+    }
+  }
+
+  //Animation Loader //
+
+.loader {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: loader 3s ease-in-out;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+
+    & h1 {
+      @include title-font;
+      color: $text-white;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      font-weight: 200;
+      text-align: center;
+      margin-top: 50vh;
+      padding-bottom: 20px;
+
+    }
+  }
+
+  .loader span {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    animation: 3s infinite linear;
+
+  }
+
+  .loader span:nth-child(2) {
+    background: $primary-color;
+    animation: child2 1.2s infinite linear;
+  }
+
+  .loader span:nth-child(3) {
+    background: $tertiary-color;
+    z-index: 100;
+  }
+
+  .loader span:nth-child(4) {
+    background: $fourth-color;
+    animation: child4 1.2s infinite linear;
+  }
+
+  @keyframes loader {
+    0% {
+      background-color: rgba(0, 0, 0, 0.8);
+      opacity: 1;
+    }
+
+    100% {
+      background-color: rgba(0, 0, 0, 0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes child2 {
+    0% {
+      transform: translateX(-20px);
+      z-index: 200;
+    }
+
+    50% {
+      transform: translateX(20px);
+    }
+
+    100% {
+      transform: translateX(-20px);
+    }
+  }
+
+  @keyframes child4 {
+    0% {
+      transform: translateX(20px);
+    }
+
+    50% {
+      transform: translateX(-20px);
+    }
+
+    100% {
+      transform: translateX(20px);
+      z-index: 200;
+    }
+  }
+
+  // Animation plat //
+
+.menu-title-heart {
+
+    .fa-regular:active {
+        color: $primary-color;
+    }
+}
+
+.entrees-anim {
+    opacity: 0;
+    animation: descend 2s ease forwards;
+}
+
+@keyframes descend {
+    from {
+        transform: translateY(-100%);
+        /* Commence en haut (en dehors de l'écran) */
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        /* Se termine en bas de l'écran */
+        opacity: 1;
+    }
+}
+
+// /*Les plats*/
+.plats-anim {
+    opacity: 0;
+    animation: descend-two 2s ease forwards 2500ms;
+}
+
+@keyframes descend-two {
+    from {
+        transform: translateY(-100%);
+        /* Commence en haut (en dehors de l'écran) */
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        /* Se termine en bas de l'écran */
+        opacity: 1;
+    }
+}
+
+//   /*Les desserts*/
+.desserts-anim {
+    opacity: 0;
+    animation: descend-three 2s ease forwards 4500ms;
+}
+
+@keyframes descend-three {
+    from {
+        transform: translateY(-100%);
+        /* Commence en haut (en dehors de l'écran) */
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        /* Se termine en bas de l'écran */
+        opacity: 1;
+    }
+}
