@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Shrikhand&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  img {
+    height: 600px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: black;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+  margin: 40px 0 20px 20px;
+}
+@media screen and (min-width: 1024px) {
+  h2 {
+    display: flex;
+    position: relative;
+    left: 13%;
+  }
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: black;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #10392f;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+.euro {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 30px 5px 0 0;
+}
+
+.cards span, .menu span {
+  display: flex;
+  position: relative;
+}
+.cards .fa-heart, .menu .fa-heart {
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  font-size: 20px;
+  color: black;
+}
+.cards .fa-solid, .menu .fa-solid {
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  background: linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+  z-index: 10;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.cards .fa-solid:hover, .menu .fa-solid:hover {
+  opacity: 1;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: loader 3s ease-in-out;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+.loader h1 {
+  font-family: "Shrikhand", cursive;
+  color: #ffffff;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 50vh;
+  padding-bottom: 20px;
+}
+
+.loader span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  animation: 3s infinite linear;
+}
+
+.loader span:nth-child(2) {
+  background: #9356dc;
+  animation: child2 1.2s infinite linear;
+}
+
+.loader span:nth-child(3) {
+  background: #99e2d0;
+  z-index: 100;
+}
+
+.loader span:nth-child(4) {
+  background: #89c8fa;
+  animation: child4 1.2s infinite linear;
+}
+
+@keyframes loader {
+  0% {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+  }
+}
+@keyframes child2 {
+  0% {
+    transform: translateX(-20px);
+    z-index: 200;
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@keyframes child4 {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+    z-index: 200;
+  }
+}
+/*Mise en page du header*/
+header {
+  width: 100%;
+  height: 64px;
+  box-shadow: 0 0 5px 5px #d6d6d6;
+  display: flex;
+}
+header img {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 15px;
+  -o-object-fit: none;
+     object-fit: none;
+}
+header i {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0 24px;
+  font-size: 20px;
+}
+@media screen and (min-width: 1024px) {
+  header {
+    margin: 0 auto;
+    box-shadow: none;
+  }
+}
+
+/*Mise en forme du footer*/
+footer {
+  width: 100%;
+  background-color: #353535;
+  padding: 22px;
+  position: relative;
+}
+footer h3 {
+  color: #ffffff;
+  margin: 0 0 15px 10px;
+}
+@media screen and (min-width: 1024px) {
+  footer h3 {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 68px;
+    right: 32px;
+  }
+}
+footer .footer-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 50px;
+    margin-right: 200px;
+  }
+}
+footer .footer-container a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 8px 10px;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-container a {
+    margin: 0 10px;
+  }
+}
+footer .footer-container a i {
+  width: 22px;
+  font-size: 16px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-container a i {
+    padding-right: 5px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    width: 100%;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=layout.css.map */
