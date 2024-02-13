@@ -1,6 +1,7 @@
 @import 'base';
 @import 'layout';
 @import 'button';
+@import 'animation';
 
 /*Mise en page du container "location"*/
 
@@ -109,7 +110,7 @@
       content: '' counter(steps-functioning);
       width: 30px;
       height: 30px;
-      background-color: #9356dc;
+      background-color: $primary-color;
       border-radius: 50%;
       display: flex;
       justify-content: center;
