@@ -189,7 +189,7 @@
         }
     }
 
-    &-check {
+    &-check, .fa-circle-check{
         background-color: $tertiary-color;
         width: 60px;
         height: 77px;
@@ -205,6 +205,12 @@
 
         i {
             color: $text-white;
+        }
+
+        .fa-circle-check{
+            margin-left: -55px;
+            color: white;
+            font-weight: 900;
         }
     }
 }

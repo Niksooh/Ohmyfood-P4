@@ -838,7 +838,7 @@ p {
 .plate-price p {
   margin-left: -50px;
 }
-.plate-check {
+.plate-check, .plate .fa-circle-check {
   background-color: #99e2d0;
   width: 60px;
   height: 77px;
@@ -852,8 +852,13 @@ p {
   flex-shrink: 0;
   transition: all 1s;
 }
-.plate-check i {
+.plate-check i, .plate .fa-circle-check i {
   color: #ffffff;
+}
+.plate-check .fa-circle-check, .plate .fa-circle-check .fa-circle-check {
+  margin-left: -55px;
+  color: white;
+  font-weight: 900;
 }
 
 /*Soulignement  des entrées, platset desserts*/
