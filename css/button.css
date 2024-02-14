@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 *,
 ::before,
 ::after {
@@ -11,6 +11,8 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 img {
@@ -87,9 +89,27 @@ p {
   font-weight: 500;
   color: #ffffff;
   cursor: pointer;
-  box-shadow: 0 0 10px 0 #b4b4b4;
+  box-shadow: 0 0 10px 0 #aaaaaa;
 }
 
 .btn-purple:hover {
-  opacity: 0.85;
+  opacity: 1;
+  background-color: #89c8fa;
+  animation: btn-purple-anim 0.75s ease-out forwards;
+  box-shadow: 0 0 10px 0 #777777;
+}
+
+@keyframes btn-purple-anim {
+  0% {
+    filter: brightness(1.05);
+    -webkit-filter: brightness(1.05);
+  }
+  50% {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+  }
+  100% {
+    filter: brightness(1.15);
+    -webkit-filter: brightness(1.15);
+  }
 }/*# sourceMappingURL=button.css.map */
