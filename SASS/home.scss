@@ -7,7 +7,7 @@
 
 .location {
     width: 100%;
-    background-color: #eaeaea;
+    background-color: $light-grey;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@
       border: none;
       border-radius: 5px;
       outline: none;
-      background-color: #eaeaea;
+      background-color: $light-grey;
     }
 
     & input:focus {
@@ -43,7 +43,7 @@
     width: 100%;
     padding-top: 40px;
     padding-bottom: 30px;
-    background-color: #f6f6f6;
+    background-color: $light-grey2;
     display: grid;
     place-items: center;
 
@@ -89,13 +89,13 @@
      .step {
       width: calc(100% - 14px);
       height: 20px;
-      background-color: #f6f6f6;
+      background-color: $light-grey2;
       border-radius: 20px;
       padding: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 0 10px 0 darken(#f6f6f6, 26%);
+      box-shadow: 0 0 10px 0 darken($light-grey2, 26%);
       position: relative;
       margin-bottom: 20px;
 

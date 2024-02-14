@@ -16,14 +16,14 @@
     font-weight: 500;
     color: $text-white;
     cursor: pointer;
-    box-shadow: 0 0 10px 0 darken(#f6f6f6, 30%);
+    box-shadow: 0 0 10px 0 darken($light-grey2, 30%);
   }
 
   .btn-purple:hover {
     opacity: 1;
     background-color:  $fourth-color;
     animation: btn-purple-anim 0.75s ease-out forwards;
-    box-shadow: 0 0 10px 0 darken(#f6f6f6, 50%);
+    box-shadow: 0 0 10px 0 darken($light-grey2, 50%);
   }
 
   @keyframes btn-purple-anim {
